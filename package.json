@@ -1,0 +1,19 @@
+{
+  "name": "emergentone",
+  "version": "1.0.0",
+  "description": "auth link testing",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "author": "Morgan Bickle",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.10.2",
+    "connect": "^3.3.4",
+    "express": "^4.11.1"
+  }
+}
