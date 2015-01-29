@@ -30,7 +30,7 @@ var authenticateUser = function(username, password, callback) {
     if (username === "demo") {
         return callback(null, {
                 authenticated: true,
-            /* id: "demo", */
+            my_custom_attr: "this is some stuff", 
             token: "demo-token"
         });
     } else {
