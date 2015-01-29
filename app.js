@@ -29,8 +29,8 @@ var authenticateUser = function(username, password, callback) {
     // a valid user and has a token of "demo-token"
     if (username === "demo") {
         return callback(null, {
-            authenticated: true,
-            id: "demo",
+                authenticated: true,
+            /* id: "demo", */
             token: "demo-token"
         });
     } else {
