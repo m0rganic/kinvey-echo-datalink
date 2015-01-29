@@ -1,19 +1,27 @@
 {
-  "name": "emergentone",
+  "name": "kinvey-echo-dlc",
   "version": "1.0.0",
-  "description": "auth link testing",
-  "main": "app.js",
+  "description": "Echo's back the request details in the response",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "engines": {
-    "node": "0.10.x"
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:m0rganic/kinvey-echo-datalink.git"
   },
+  "keywords": [
+    "kinvey",
+    "data",
+    "link",
+    "connector",
+    "echo"
+  ],
   "author": "Morgan Bickle",
   "license": "MIT",
-  "dependencies": {
-    "body-parser": "^1.10.2",
-    "connect": "^3.3.4",
-    "express": "^4.11.1"
-  }
+  "bugs": {
+    "url": "https://github.com/m0rganic/kinvey-echo-datalink/issues"
+  },
+  "homepage": "https://github.com/m0rganic/kinvey-echo-datalink"
 }
