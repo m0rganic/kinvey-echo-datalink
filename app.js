@@ -12,12 +12,17 @@ app.get('/echo',function(req,res){
 });
 app.put('/echo',function(req,res){
   res.set(req.headers);
-  res.write(JSON.stringify(req.body));
+  res.write(new Buffer(req.body));
   res.end();
 });
 app.post('/echo',function(req,res){
   res.set(req.headers);
-  res.write(JSON.stringify(req.body));
+  res.write(new Buffer(req.body));
+  res.end();
+});
+
+app.get('/',function(req,res){
+  res.write(new Buffer({'msg':'hello!'}));
   res.end();
 });
 

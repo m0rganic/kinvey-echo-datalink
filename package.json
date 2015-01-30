@@ -4,8 +4,7 @@
   "description": "Echo's back the request details in the response",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "DEBUG=express node app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -18,6 +17,9 @@
     "connector",
     "echo"
   ],
+  "engines": {
+    "node": "0.10.x"
+  },
   "author": "Morgan Bickle",
   "license": "MIT",
   "bugs": {
