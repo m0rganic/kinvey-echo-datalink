@@ -6,22 +6,23 @@ var uuid = require('node-uuid');
 var app            =        express();
 app.use(bodyParser.json());
 app.get('/echo',function(req,res){
-  res.set(req.headers);
+  console.log("REQUEST headers "+JSON.stringify(req.headers));
   res.write(JSON.stringify({'_id':uuid.v4()}));
   res.end();
 });
 app.put('/echo',function(req,res){
-  res.set(req.headers);
+  console.log("REQUEST headers "+JSON.stringify(req.headers));
   res.write(JSON.stringify(req.body));
   res.end();
 });
 app.post('/echo',function(req,res){
-  res.set(req.headers);
+  console.log("REQUEST headers "+JSON.stringify(req.headers));
   res.write(JSON.stringify(req.body));
   res.end();
 });
 
 app.get('/',function(req,res){
+  console.log("REQUEST headers "+JSON.stringify(req.headers));
   res.write(new Buffer({'msg':'hello!'}));
   res.end();
 });
