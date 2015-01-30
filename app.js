@@ -7,17 +7,17 @@ var app            =        express();
 app.use(bodyParser.json());
 app.get('/echo',function(req,res){
   res.set(req.headers);
-  res.write(new Buffer({'_id':uuid.v4()}));
+  res.write(JSON.stringify({'_id':uuid.v4()}));
   res.end();
 });
 app.put('/echo',function(req,res){
   res.set(req.headers);
-  res.write(new Buffer(req.body));
+  res.write(JSON.stringify(req.body));
   res.end();
 });
 app.post('/echo',function(req,res){
   res.set(req.headers);
-  res.write(new Buffer(req.body));
+  res.write(JSON.stringify(req.body));
   res.end();
 });
 
