@@ -2,10 +2,10 @@
   "name": "kinvey-echo-dlc",
   "version": "1.0.0",
   "description": "Echo's back the request details in the response",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "DEBUG=express node app.js"
   },
   "repository": {
     "type": "git",
