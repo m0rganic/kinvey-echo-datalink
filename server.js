@@ -1,26 +1,24 @@
 var express        =        require("express");
 var bodyParser     =        require("body-parser");
 var util           =        require("util");
+var uuid = require('node-uuid');
+
 var app            =        express();
 app.use(bodyParser.json());
 app.get('/echo',function(req,res){
-  console.log("GET: "+util.inspect(req));
-  res.end({'_id':new Date().toString()});
+  res.set(req.headers);
+  res.write(new Buffer({'_id':uuid.v4()}));
+  res.end();
 });
 app.put('/echo',function(req,res){
-  console.log("PUT: "+util.inspect(req));
-  console.log("PUT: "+req.body);
-  res.end(res.body);
+  res.set(req.headers);
+  res.write(JSON.stringify(req.body));
+  res.end();
 });
 app.post('/echo',function(req,res){
-  console.log("POST: "+util.inspect(req));
-  console.log("POST: "+res.body);
-  res.end(res.body);
-});
-app.delete('/echo',function(req,res){
-  console.log("DELETE: "+util.inspect(req));
-  console.log("DELETE: "+res.body);
-  res.end(res.body);
+  res.set(req.headers);
+  res.write(JSON.stringify(req.body));
+  res.end();
 });
 
 app.listen(3000,function(){
